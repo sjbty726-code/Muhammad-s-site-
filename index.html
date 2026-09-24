@@ -21,11 +21,11 @@
         <section class="auth-card">
 
             <div class="tabs">
-                <button id="loginTab" class="tab active">
+                <button id="loginTab" class="tab active" type="button">
                     تسجيل الدخول
                 </button>
 
-                <button id="registerTab" class="tab">
+                <button id="registerTab" class="tab" type="button">
                     إنشاء حساب
                 </button>
             </div>
@@ -98,6 +98,33 @@
 
                 <button type="submit" class="main-button">
                     إنشاء الحساب
+                </button>
+
+            </form>
+
+            <!-- التحقق من البريد -->
+            <form id="verifyForm" class="hidden">
+
+                <h2>تأكيد البريد الإلكتروني</h2>
+
+                <p>
+                    أرسلنا رمز تحقق من 6 أرقام إلى بريدك الإلكتروني.
+                </p>
+
+                <label for="verificationCode">رمز التحقق</label>
+                <input
+                    type="text"
+                    id="verificationCode"
+                    placeholder="أدخل رمز التحقق"
+                    inputmode="numeric"
+                    autocomplete="one-time-code"
+                    maxlength="6"
+                    pattern="[0-9]{6}"
+                    required
+                >
+
+                <button type="submit" class="main-button">
+                    تأكيد البريد الإلكتروني
                 </button>
 
             </form>
